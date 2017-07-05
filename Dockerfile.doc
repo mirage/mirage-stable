@@ -1,0 +1,8 @@
+FROM ocaml/opam:alpine
+RUN git -C /home/opam/opam-repository pull origin master && opam update
+RUN opam pin add no-camlp4 https://github.com/avsm/no-camlp4.git
+COPY . /home/opam/src
+RUN sudo chown -R opam /home/opam/src
+RUN opam remote add mirage /home/opam/src
+RUN opam depext -u mirage-core
+RUN opam install -yj4 mirage-core no-camlp4
