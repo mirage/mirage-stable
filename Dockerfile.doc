@@ -1,5 +1,6 @@
 FROM ocaml/opam:alpine_ocaml-4.04.2
 RUN git -C /home/opam/opam-repository pull origin master && opam update
+RUN opam remote add mir-dev https://github.com/mirage/mirage-dev.git
 RUN opam pin add no-camlp4 https://github.com/avsm/no-camlp4.git
 COPY . /home/opam/src
 RUN sudo chown -R opam /home/opam/src
