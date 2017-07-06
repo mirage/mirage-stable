@@ -25,17 +25,16 @@ depends: [
   "mirage-console-unix"
   "mirage-console-xen"
   "mirage-console-xen-backend"
-  "mirage-console-xen-cli"
   "mirage-console-xen-proto"
   "mirage-device"
-  "mirage-dns"
+  "mirage-dns" {>="3.0.0"}
   "mirage-entropy"
   "mirage-flow"
   "mirage-flow-lwt"
   "mirage-flow-unix"
   "mirage-flow-rawlink"
   "mirage-fs-unix"
-  "mirage-http"
+  "mirage-http" {>="3.0.0"}
   "mirage-logs"
   "mirage-net-flow"
   "mirage-net-solo5"
@@ -51,12 +50,11 @@ depends: [
   "arp"
   "asn1-combinators"
   "base64"
-  "cohttp"
+  "cohttp" {>="0.99"}
   "cstruct" {>="3.0.2"}
   "dns"
   "functoria"
   "git"
-  "github"
   "logs-syslog"
   "nocrypto"
   "pcap-format"
@@ -73,7 +71,6 @@ depends: [
   "x509"
   "xen-evtchn"
   "xen-gnt"
-  "xenctrl"
   "xenstore"
   "xenstore_transport"
 ]
