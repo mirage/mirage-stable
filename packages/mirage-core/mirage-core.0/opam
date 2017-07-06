@@ -9,7 +9,7 @@ license:      "ISC"
 build: [ ]
 depends: [
   "mirage" {>="3.0.4"}
-  "mirage-block"
+  "mirage-block" {>="1.1.0"}
   "mirage-block-lwt"
   "mirage-block-ramdisk"
   "mirage-block-solo5"
@@ -51,10 +51,11 @@ depends: [
   "asn1-combinators"
   "base64"
   "cohttp" {>="0.99"}
+  "cohttp-lwt-unix"
   "cstruct" {>="3.0.2"}
   "dns"
-  "functoria"
-  "git"
+  "functoria" {>="2.1.0"}
+  "git" {>="1.11.0"}
   "logs-syslog"
   "nocrypto"
   "pcap-format"
@@ -67,7 +68,7 @@ depends: [
   "tuntap"
   "uri" {>="1.9.4"}
   "utop"
-  "vchan"
+  "vchan" {>="3.0.0"}
   "x509"
   "xen-evtchn"
   "xen-gnt"
